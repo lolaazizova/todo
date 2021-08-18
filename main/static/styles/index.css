@@ -12,7 +12,7 @@ section{
     align-items: center;
 }
 .create_conteiner{
-    width: 80%;
+    width: 70%;
 }
 .create_input{
     padding: 12px 5px;
@@ -82,7 +82,7 @@ section{
     font-size: 15px;
     font-family: sans-serif;
 }
-.todo_item_footer. action_buttons{
+.todo_item_footer.action_buttons{
     display: flex;
 }
 .todo_item_footer img{
