@@ -10,7 +10,6 @@ class ToDo(models.Model):
 
 
 class ToMeet(models.Model):
-
     persone = models.CharField(max_length=100) 
     phone_number = models.CharField(max_length=40)
     date_of_meeting = models.DateTimeField(auto_now_add=True)
