@@ -1,5 +1,5 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import ToDo, ToMeet
 
 def homepage(request):
@@ -16,3 +16,9 @@ def tomeet(request):
     tomeet_list = ToMeet.objects.all()
     return render(request, "meeting.html", {"tomeet_list": tomeet_list})
     
+def add_todo(request):
+    form = request.POST
+    text = form["todo_text"]
+    todo = ToDo(text=text)
+    todo.save()
+    return redirect(test)
