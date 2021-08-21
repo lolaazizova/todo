@@ -1,6 +1,6 @@
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
-from .models import ToDo, ToMeet
+from .models import *
 
 def homepage(request):
     return render(request, "index.html")
@@ -22,3 +22,10 @@ def add_todo(request):
     todo = ToDo(text=text)
     todo.save()
     return redirect(test)
+
+def habit(request):
+    habit_list = Habit.objects.all()
+    return render(request, "habits.html", {"habit_list": habit_list})
+
+
+
