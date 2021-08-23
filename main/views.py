@@ -27,5 +27,7 @@ def habit(request):
     habit_list = Habit.objects.all()
     return render(request, "habits.html", {"habit_list": habit_list})
 
-
-
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)
